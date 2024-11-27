@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #dictionary { display: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Traductor Interactivo</h1>
+    </header>
+    <main>
+        <section id="translator">
+            <h2>Traductor</h2>
+            <input type="text" id="wordInput" placeholder="Escribe una palabra">
+            <div>
+                <label><input type="radio" name="language" value="es" checked> Inglés → Español</label>
+                <label><input type="radio" name="language" value="en"> Español → Inglés</label>
+            </div>
+            <button id="translateButton">Traducir</button>
+            <p id="translationResult"></p>
+        </section>
+        <section id="dictionaryControls">
+            <button id="toggleDictionaryButton">Mostrar/Ocultar Diccionario</button>
+        </section>
+        <section id="dictionary">
+            <h2>Diccionario</h2>
+            <div id="sortOptions">
+                <button id="sortAZButton">Ordenar A-Z</button>
+                <button id="sortZAButton">Ordenar Z-A</button>
+            </div>
+            <div id="categories">
+                <label><input type="radio" name="category" value="all" checked> Todos</label>
+                <label><input type="radio" name="category" value="animals"> Animales</label>
+                <label><input type="radio" name="category" value="fruits"> Frutas</label>
+                <label><input type="radio" name="category" value="colors"> Colores</label>
+                <label><input type="radio" name="category" value="physical_descriptions"> Descripciones físicas</label>
+                <label><input type="radio" name="category" value="skills"> Habilidades</label>
+                <label><input type="radio" name="category" value="verbs"> Verbos</label>
+
+            </div>
+            <ul id="wordList"></ul>
+        </section>
+        <section id="addWord">
+            <h2>Añadir Nueva Palabra</h2>
+            <form id="addWordForm">
+                <input type="text" id="newWordEn" placeholder="Palabra en inglés">
+                <input type="text" id="newWordEs" placeholder="Traducción en español">
+                <input type="text" id="example" placeholder="Ejemplo de uso">
+                <select id="categorySelect">
+                    <option value="fruits">Frutas</option>
+                    <option value="colors">Colores</option>
+                    <option value="physical_descriptions">Descripciones físicas</option>
+                    <option value="food">Comidas</option>
+                    <option value="skills">Habilidades</option>
+                </select>
+                <button type="submit">Añadir Palabra</button>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
